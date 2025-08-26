@@ -118,15 +118,22 @@ document.getElementById('pay-btn').addEventListener('click', function(event){
     document.getElementById('have-money').innerText = totalBalance
 })
 
+// styles
 
+const clickStyle = document.getElementsByClassName('bg-control');
+for (const style of clickStyle){
+    style.addEventListener('click', function(){
+        for(const st of clickStyle){
+            st.style.backgroundColor = '';
+        }
+        this.style.backgroundColor = 'cyan'
+    })
+}
+
+ 
 
 
 // toggle features
-function displayHide(id){
-    const form = document.getElementsByClassName('all-section')
-    console.log(form)
-}
-
 
 
 document.getElementById('control-add-money').addEventListener('click', function(){
